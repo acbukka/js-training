@@ -136,12 +136,12 @@
 //   console.log(`Sarah is too young, wait another ${yearLeft} years :)`);
 // }
 
-const hasDriverLicense = true; // A
-const hasGoodVision = true; // B
+// const hasDriverLicense = true; // A
+// const hasGoodVision = true; // B
 
-console.log(hasDriverLicense && hasGoodVision);
-console.log(hasDriverLicense || hasGoodVision);
-console.log(!hasDriverLicense);
+// console.log(hasDriverLicense && hasGoodVision);
+// console.log(hasDriverLicense || hasGoodVision);
+// console.log(!hasDriverLicense);
 
 // const shoulDrive = hasDriverLicense && hasGoodVision;
 
@@ -277,5 +277,43 @@ console.log(!hasDriverLicense);
 // let tip = billValue >= 50 && billValue <= 300 ? billValue * 0.15 : billValue * 0.2;
 // console.log(`Bill value is: ${billValue}, the tip was: ${tip}, and the total value: ${billValue + tip}`);
 
+function logger() {
+  console.log('My name is Jonas');
+}
 
-// ggg
+// calling / running / invoking function:
+logger();
+logger();
+logger();
+
+
+function fruitProcessor(apples, oranges) {
+  const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+  return juice; 
+}
+
+
+const appleJuice = fruitProcessor(5, 0);
+console.log(appleJuice);
+// тут мы задали аргументы для функции (5, 0), которые вставли на позиции apple и oranges соответсвенно,
+// затем, оператор return в функции возвращает значение переменной самой функции (fruitProcessor) и затем,
+// чтобы увидеть этот результат нам необходимо получить это значение в переменную (appleJuice), мы могли увидеть
+// результат и без переменной, используя console.log(fruitProcessor(5, 0)).
+
+const appleOrangeJuice = fruitProcessor(2, 4);
+console.log(appleOrangeJuice);
+
+
+// возвращаем факториал:
+
+function factorial(num) {
+  var x = num;
+  while (x > 1) {
+    num *= x-1;
+    x--;
+  }
+  return num;
+}
+
+const numValue = factorial(5);
+console.log(numValue);
