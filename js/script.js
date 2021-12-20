@@ -272,8 +272,9 @@ console.log(!hasDriverLicense);
 
 // A little tip calculator:
 
-const billValue = 430;
+// const billValue = 430;
 
-let tip = billValue >= 50 && billValue <= 300 ? billValue * 0.15 : billValue * 0.2;
-console.log(`Bill value is: ${billValue}, the tip was: ${tip}, and the total value: ${billValue + tip}`);
+// let tip = billValue >= 50 && billValue <= 300 ? billValue * 0.15 : billValue * 0.2;
+// console.log(`Bill value is: ${billValue}, the tip was: ${tip}, and the total value: ${billValue + tip}`);
 
+// 
