@@ -277,43 +277,119 @@
 // let tip = billValue >= 50 && billValue <= 300 ? billValue * 0.15 : billValue * 0.2;
 // console.log(`Bill value is: ${billValue}, the tip was: ${tip}, and the total value: ${billValue + tip}`);
 
-function logger() {
-  console.log('My name is Jonas');
-}
+// function logger() {
+//   console.log('My name is Jonas');
+// }
 
 // calling / running / invoking function:
-logger();
-logger();
-logger();
+// logger();
+// logger();
+// logger();
 
 
-function fruitProcessor(apples, oranges) {
-  const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
-  return juice; 
-}
+// function fruitProcessor(apples, oranges) {
+//   const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+//   return juice;
+// }
 
 
-const appleJuice = fruitProcessor(5, 0);
-console.log(appleJuice);
-// тут мы задали аргументы для функции (5, 0), которые вставли на позиции apple и oranges соответсвенно,
-// затем, оператор return в функции возвращает значение переменной самой функции (fruitProcessor) и затем,
-// чтобы увидеть этот результат нам необходимо получить это значение в переменную (appleJuice), мы могли увидеть
-// результат и без переменной, используя console.log(fruitProcessor(5, 0)).
+// const appleJuice = fruitProcessor(5, 0);
+// console.log(appleJuice);
+// // тут мы задали аргументы для функции (5, 0), которые вставли на позиции apple и oranges соответсвенно,
+// // затем, оператор return в функции возвращает значение переменной самой функции (fruitProcessor) и затем,
+// // чтобы увидеть этот результат нам необходимо получить это значение в переменную (appleJuice), мы могли увидеть
+// // результат и без переменной, используя console.log(fruitProcessor(5, 0)).
 
-const appleOrangeJuice = fruitProcessor(2, 4);
-console.log(appleOrangeJuice);
+// const appleOrangeJuice = fruitProcessor(2, 4);
+// console.log(appleOrangeJuice);
 
 
-// возвращаем факториал:
+// // возвращаем факториал:
 
-function factorial(num) {
-  var x = num;
-  while (x > 1) {
-    num *= x-1;
-    x--;
+// function factorial(num) {
+//   var x = num;
+//   while (x > 1) {
+//     num *= x-1;
+//     x--;
+//   }
+//   return num;
+// }
+
+// const numValue = factorial(5);
+// console.log(numValue);
+
+
+
+// function declaration:
+// function calcAge1(birthYear) {
+//   return 2037 - birthYear;
+// }
+// const age1 = calcAge1(1991);
+
+
+// // function expression:
+// const calcAge2 = function (birthYear) {
+//   return 2037 - birthYear;
+// };
+
+// const age2 = calcAge2(1991);
+// console.log(age1, age2);
+
+
+
+// Arrow functions:
+// const calcAge3 = birthYear => 2037 - birthYear;
+// const age3 = calcAge3(1991);
+// console.log(age3);
+
+
+// const yearsUntilRetirement = (birthYear, firstName) => {
+//   const age = 2037 - birthYear;
+//   const retirement = 65 - age;
+//   return `${firstName} retires in ${retirement} years`;
+// };
+
+// console.log(yearsUntilRetirement(1991, 'Jonas'));
+// console.log(yearsUntilRetirement(1980, 'Bob'));
+
+
+
+// function cutFruitPieces(fruit) {
+//   return fruit * 4;
+// }
+
+
+
+  // functions calling in fuction:
+// function fruitProcessor(apples, oranges) {
+
+//   const applePieces = cutFruitPieces(apples);
+//   const orangePieces = cutFruitPieces(oranges);
+  
+//   const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange.`;
+//   return juice;
+// }
+
+// console.log(fruitProcessor(2, 3));
+
+
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
+};
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+  const age = calcAge(birthYear);
+  const retirement = 65 - age;
+
+  if (retirement > 0) {
+    console.log(`${firstName} retires in ${retirement} years`);
+    return retirement;
+  } else {
+    console.log(`${firstName} has already retired`);
+    return -1;
   }
-  return num;
-}
 
-const numValue = factorial(5);
-console.log(numValue);
+};
+
+console.log(yearsUntilRetirement(1991, 'Jonas'));
+
