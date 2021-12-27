@@ -373,6 +373,12 @@
 // console.log(fruitProcessor(2, 3));
 
 
+const calcAge3 = birthYear => 2037 - birthYear;
+const age3 = calcAge3(1991);
+console.log(age3);
+
+
+
 const calcAge = function (birthYear) {
   return 2037 - birthYear;
 };
@@ -388,8 +394,93 @@ const yearsUntilRetirement = function (birthYear, firstName) {
     console.log(`${firstName} has already retired`);
     return -1;
   }
-
 };
 
 console.log(yearsUntilRetirement(1991, 'Jonas'));
 
+
+// const dolphinsScore = 44 + 23 + 71;
+// const koalasScore = 65 + 54 + 49;
+
+// 1:
+const calcAverage = (firstScore, secondScore, thirdScore) => (firstScore + secondScore + thirdScore) / 3;
+
+// 2:
+const avgDolphins = calcAverage(44, 23, 71);
+const avgKoalas = calcAverage(65, 54, 49);
+
+const avgDolphins2 = calcAverage(85, 54, 41);
+const avgKoalas2 = calcAverage(23, 34, 27);
+
+// 3:
+const checkWinner = function (avgDolphins, avgKoalas) {
+  if (avgDolphins > avgKoalas) {
+    console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+  } else {
+    console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+  }
+}; 
+checkWinner(avgDolphins, avgKoalas);
+
+// 4:
+checkWinner(avgDolphins2, avgKoalas2);
+
+
+
+
+
+
+
+
+
+// проверям на правдивость окончание слова, используя slice:
+function solution(str, ending){
+  return str.slice(-ending.length) === ending || ending === '' ? true : false;
+}
+console.log(solution('zombie', ''));
+
+
+// убираем пробелы из строки с помощью slice:
+function noSpace(x){
+  return x.replace(/ /g, '');
+}
+console.log(noSpace("hbhhjbjhb   jhjhjbhbb  jjhjj"));
+
+
+
+
+// опеределяем длину введенного числа:
+function digits(num) {
+  return num.toString().length;
+}
+console.log(digits(777777));
+
+
+
+
+// создаем fakeBin, заменяя все что 5 и больше на 1, а что меньше 5 на 0
+function fakeBin(num) {
+  return num.replace(/[0-4]/g, "0").replace(/[5-9]/g, "1");
+}
+const fBin = fakeBin('55665522');
+console.log(fBin);
+
+
+
+// создаем аббревиатуру имени, с использованием split (выделяя сначала слово в массиве а затем порядковый номер буквы)
+function abbrevName(name) {
+   return name.split(" ")[0][0].toUpperCase() + '.' + name.split(" ")[1][0].toUpperCase();
+}
+console.log(abbrevName('Sam Harris'));
+
+
+
+
+function cookingTime(eggs) {
+  const maxEggs = 8;
+  if (eggs == 0) {
+    return 0;
+  } else {
+    return Math.round(eggs / maxEggs) * 5;
+  }
+}
