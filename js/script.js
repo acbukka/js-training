@@ -1,6 +1,58 @@
 'use strict';
 
 
+function reverseInt(num) {
+  if (num.toString().length > 0) {
+    return num.toString()[3] + num.toString()[2];
+  }
+}
+console.log(reverseInt(1234));
+
+// возвращаем номер в обратном порядке:
+function reverseInt(num) {
+  let x = num.toString().length;
+  let revInt = "";
+  while (x > 0) {
+    revInt = revInt + num.toString()[x - 1];
+    x--;
+  }
+  return revInt;
+}
+console.log(reverseInt(95034));
+
+
+// Короткая запись: ~
+// function reverseInt(num) {
+//   if (num.toString().length > 0) {
+
+//   }
+// }
+// console.log(reverseInt(152514));
+
+
+
+
+
+// convert a number(from 0 to 999 to a readable number):
+
+// module.exports = function toReadable(number) {
+//   switch (number){
+//     case 0: return 'zero';
+//     case 1: return 'one';
+//     case 2: return 'two';
+//     case 3: return 'three';
+//     case 4: return 'four';
+//     case 5: return 'five';
+//     case 6: return 'six';
+//     case 7: return 'seven';
+//     case 8: return 'eight';
+//     case 9: return 'nine';
+    
+//   }
+// };
+
+
+
 // const firstName = 'Jonas';
 // const job = 'teacher';
 // const birthYear = 1991;
@@ -304,7 +356,7 @@
 // console.log(appleOrangeJuice);
 
 
-// // возвращаем факториал:
+// возвращаем факториал:
 
 // function factorial(num) {
 //   var x = num;
